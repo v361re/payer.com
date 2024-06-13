@@ -1,0 +1,264 @@
+.jq-checkbox,
+.jq-radio {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.jq-checkbox input,
+.jq-radio input {
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.jq-file {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.jq-file input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    font-size: 100px;
+    line-height: 1em;
+}
+
+.jq-file__name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-overflow-scrolling: touch;
+}
+
+.jq-selectbox,
+.jq-select-multiple {
+    position: relative;
+    display: inline-block;
+}
+
+.jq-selectbox select,
+.jq-select-multiple select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.jq-selectbox li,
+.jq-select-multiple li {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.jq-selectbox {
+    z-index: 10;
+}
+
+.jq-selectbox__select {
+    position: relative;
+}
+
+.jq-selectbox__select-text {
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-overflow-scrolling: touch;
+}
+
+.jq-selectbox__dropdown {
+    position: absolute;
+}
+
+.jq-selectbox__search input {
+    -webkit-appearance: textfield;
+}
+
+.jq-selectbox__search input::-webkit-search-cancel-button,
+.jq-selectbox__search input::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+.jq-selectbox__dropdown ul {
+    position: relative;
+    overflow: auto;
+    overflow-x: hidden;
+    list-style: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.jq-select-multiple ul {
+    position: relative;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.jq-number {
+    display: inline-block;
+}
+
+.jq-number__field input {
+    -moz-appearance: textfield;
+    text-align: left;
+    /* для Opera Presto */
+}
+
+.jq-number__field input::-webkit-inner-spin-button,
+.jq-number__field input::-webkit-outer-spin-button {
+    margin: 0;
+    /* в каких-то браузерах присутствует отступ */
+    -webkit-appearance: none;
+}
+
+.js-select-acc-form .jq-selectbox.jqselect.changed .jq-selectbox__select-text {
+  font-weight: 600;
+  color: #03a9f4;
+}
+
+.js-select-acc-form .jq-selectbox__select-text {
+  position: relative;
+  width: 100%;
+  padding: 13px 37px 14px 15px;
+  font-size: 22px;
+  line-height: 26px;
+  color: rgba(181,181,181,0.5);
+  border: 2px solid rgba(7,34,71,0.196);
+  border-radius: 10px;
+}
+
+.js-select-acc-form .jq-selectbox__trigger {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+
+.js-select-acc-form .jq-selectbox__trigger-arrow {
+   width: 18px;
+   height: 10px;
+   background: url("/images/arrow-select.svg") 0 0 no-repeat;
+}
+
+.js-select-acc-form .jq-selectbox__search {
+  padding-top: 16px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.js-select-acc-form .jq-selectbox__search:after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  right: -5px;
+  width: 18px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  height: 10px;
+  background: url("/images/arrow-select.svg") 0 0 no-repeat;
+}
+
+.js-select-acc-form .jq-selectbox__search input {
+  font-size: 18px;
+  color: #042433;
+  width: 390px;
+  height: 38px;
+}
+
+.js-select-acc-form .jq-selectbox__search ::-webkit-input-placeholder {
+  font-size: 18px;
+}
+
+.js-select-acc-form .jq-selectbox__search ::-moz-placeholder {
+  font-size: 18px;
+}
+
+.js-select-acc-form .jq-selectbox__search :-ms-input-placeholder {
+  font-size: 18px;
+}
+
+.js-select-acc-form .jq-selectbox__search ::-ms-input-placeholder {
+  font-size: 18px;
+}
+
+.js-select-acc-form .jq-selectbox__search ::placeholder {
+  font-size: 18px;
+  color: rgb(7 36 76 / 50%);
+}
+
+.js-select-acc-form .jq-selectbox__dropdown {
+  background: #fff;
+  border: 2px solid #03a9f4;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 100%;
+  padding-right: 25px;
+}
+
+.js-select-acc-form .jq-selectbox__dropdown ul {
+  max-height: 180px;
+  padding-left: 30px;
+  scrollbar-color: #03a9f4 #f3f5f6;
+  scrollbar-width: 4px;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.js-select-acc-form .jq-selectbox__dropdown ul::-webkit-scrollbar {
+  width: 4px;
+}
+
+.js-select-acc-form .jq-selectbox__dropdown ul::-webkit-scrollbar-track {
+  background: #f3f5f6;
+}
+
+.js-select-acc-form .jq-selectbox__dropdown ul::-webkit-scrollbar-thumb {
+  background: #03a9f4;
+}
+
+.js-select-acc-form .jq-selectbox__dropdown ul::-webkit-scrollbar-thumb:hover {
+  background: #15b4fc;
+}
+
+.js-select-acc-form .jq-selectbox__dropdown ul li {
+  font-size: 16px;
+  color: #03a9f4;
+  font-weight: 600;
+  line-height: 26px;
+  transition: color 0.3s;
+}
+
+.js-select-acc-form .jq-selectbox__dropdown ul li:hover {
+  color: #042433;
+}
+
+.js-select-acc-form .jq-selectbox__not-found {
+  color: rgba(240,147,124,0.95);
+  padding-left: 20px;
+}

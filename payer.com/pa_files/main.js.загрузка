@@ -1,0 +1,742 @@
+var formTimerError;
+
+$(document).ready(function()
+{
+   if ($('.select__control').length)
+   {
+      $('.select__control').select2();
+   }
+
+   if ($('[data-toggle="tooltip"]').length)
+   {
+      $('[data-toggle="tooltip"]').tooltip();
+   }
+
+   $('div.error, div.topform-result').click(function()
+   {
+      $(this).hide();
+   });
+
+   $(".js-select-acc-form select").styler({
+      selectSearch: true,
+      selectPlaceholde: 'Select country...',
+      selectSearchPlaceholde: 'Search...',
+      selectSearchLimit: 7,
+      onSelectOpened: function(){
+         $('.login-form__content-inner').css('overflow','visible')
+      },
+      onSelectClosed: function(){
+         $('.login-form__content-inner').css('overflow','hide')
+      }
+   });
+
+   $('.SlectBox').SumoSelect();
+
+   var flag = $('.header-option').find('img');
+   var flagImages = {
+      en: 'en.svg',
+      ru: 'ru.svg',
+      ge: 'ge.svg',
+      es: 'es.png',
+      fr: 'fr.svg',
+      cn: 'cn.png'
+   };
+
+   $('.SumoSelect').click(function(){
+      $(this).toggleClass('open');
+   });
+   $('.SumoSelect li').click(function(){
+      var selected = $(this).data('lang'),
+      urlPage = $(this).data('urlpage');
+      if (selected) {
+         flag.attr('src', '/style/images/' + flagImages[selected]);
+      }
+      if(urlPage) {
+         window.location.href = urlPage;
+      }
+   });
+
+
+   $('.error-clear').click(function(){
+      let parentDiv = $(this).parent();
+      parentDiv.removeClass('is-valid');
+      parentDiv.find('input').val('').removeClass('error');
+      parentDiv.find('span.error').html('').hide();
+   });
+
+   $('.info-input').on('mouseenter click', 'span', function (){
+      var $thisOffset = $(this).offset();
+      var tooltip = $('.js-tool-tip-ordertype');
+
+      tooltip.html($(this).data('title'));
+      tooltip.show();
+      tooltip.offset({
+         top: $thisOffset.top + 20,
+         left: $thisOffset.left - tooltip.outerWidth() / 5
+      });
+   });
+
+   $('.info-input span').on('mouseleave', function (){
+      $('.js-tool-tip-ordertype').hide();
+   });
+
+   $('.topform-error').click(function(){
+      const _self = this;
+      $(_self).animate({'top' : -240}, {
+         duration: 200,
+         complete: function(){
+            $(_self).hide();
+         }
+      });
+   });
+
+
+   $('.verification_code_input input').on('keydown', function(e)
+   {
+       //pre(e.keyCode);
+       var t = $(this);
+
+       switch (e.keyCode)
+       {
+           case 8:
+                if (!t.val().length)
+                {
+                    t.prev().focus();
+                }
+                else
+                {
+                    $(this).val('').change();
+                }
+           break;
+
+           case 37:
+                t.prev().focus();
+           break;
+
+           case 39:
+                t.next().focus();
+           break;
+       }
+   });
+
+
+   $('.verification_code_input input').on('input change', function ()
+   {
+       var val = $(this).val().replace(/[^0-9]+/g, '');
+       //pre('val = ' + val);
+
+       if (val.length > 1 && val.length < $('.verification_code_input input:visible').length)
+       {
+           val = '';
+       }
+
+       if (val.length >= $('.verification_code_input input:visible').length)
+       {
+           var arVal = val.split('');
+           //pre(arVal);
+
+           $('.verification_code_input input:visible').each(function()
+           {
+               $(this).val(arVal[$(this).index()]).select();
+           });
+       }
+       else
+       {
+           $(this).val(val);
+
+           if (val.length)
+           {
+               $(this).next().select();
+           }
+       }
+
+       $('.verification_code_input input').removeClass('error');
+
+       var strVal = '';
+       $('.verification_code_input input:visible').each(function()
+       {
+           var tEach = $(this);
+           var vEach = tEach.val();
+
+           strVal += vEach;
+
+           if (vEach.length)
+           {
+               tEach.addClass('notempty');
+           }
+           else
+           {
+               tEach.removeClass('notempty');
+           }
+       });
+       $('.verification_code_div input[name=code]').val(strVal).change();
+
+       if (!$('.verification_code_input input:visible').not('.notempty').length)
+       {
+           $('.verification_code_input input').removeClass('notempty');
+       }
+   });
+
+});
+
+function checkError(e) {
+   if($(e).hasClass('error')) {
+      $(e).removeClass('error');
+   }
+}
+
+function reloadCaptcha(e, t)
+{
+   var $captcha = $(e + ' img.captcha');
+   $captcha.attr('src', $captcha.attr('src').split('?')[0] + '?' + Math.random());
+
+   $('.form-input-refresh').addClass("imageRot").one('webkitAnimationEnd mozAnimationEnd oAnimationEnd msAnimationEnd animationend', function () {
+      $(this).removeClass("imageRot");
+   });
+}
+
+function number_format( number, decimals, dec_point, thousands_sep )
+{
+	var i, j, kw, kd, km;
+
+	if( isNaN(decimals = Math.abs(decimals)) )
+	{
+		decimals = 2;
+	}
+	if( dec_point == undefined )
+	{
+		dec_point = ",";
+	}
+	if( thousands_sep == undefined )
+	{
+		thousands_sep = ".";
+	}
+
+	i = parseInt(number = (+number || 0).toFixed(decimals)) + "";
+
+	if( (j = i.length) > 3 ){
+		j = j % 3;
+	} else{
+		j = 0;
+	}
+
+	km = (j ? i.substr(0, j) + thousands_sep : "");
+	kw = i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands_sep);
+	kd = (decimals ? dec_point + Math.abs(number - i).toFixed(decimals).replace(/-/, 0).slice(2) : "");
+
+	return km + kw + kd;
+}
+
+function ajaxLoad(e, params)
+{
+	if (params == undefined) params = new Object;
+	if (params.type == undefined) params.type = 'html';
+	if (params.formType == undefined) params.formType = 'text';
+	if (params.nprogress == undefined) params.nprogress = 'Y';
+
+	var url, id;
+	if (e.attributes == undefined)
+	{
+		url = e.url;
+		id = e.id;
+	}
+	else
+	{
+		url = $(e).data('ajax');
+		id = $(e).data('id');
+	}
+
+	$.ajax(
+	{
+		url: url,
+		dataType: params.formType,
+		type: 'GET',
+		cache: false,
+		beforeSend: function()
+		{
+			if (params.nprogress == 'Y') NProgress.start();
+
+         $(id + ' span.error').html('');
+         $(id + ' input.error, ' + id + ' textarea.error').removeClass('error');
+         $(id + ' div.error').addClass('hide').html('');
+         $(id + ' div.topform-result').addClass('hide');
+		},
+        success: function(response, responseStatus, xhr)
+		{
+			if (params.nprogress == 'Y') NProgress.done();
+
+			if (xhr.getResponseHeader("X-iCore-Auth") == "1")
+			{
+				antdds(xhr.responseText);
+				return;
+			}
+
+         if (params.type == 'null' && response.error.length > 0)
+         {
+            var scr = true;
+
+            for (var key in response.error)
+            {
+               if (response.error[key]['value'] != '')
+               {
+                  if (response.error[key]['field'] != '' && $(id + ' *[name=' + response.error[key]['field'] + ']').length)
+                  {
+                     if ($(id + ' *[name=' + response.error[key]['field'] + ']').prev('span.error'))
+                     {
+                        $(id + ' *[name=' + response.error[key]['field'] + ']').prev('span.error').html(response.error[key]['value']);
+                     }
+
+                     if ($(id + ' *[name=' + response.error[key]['field'] + ']').next('span.error'))
+                     {
+                        $(id + ' *[name=' + response.error[key]['field'] + ']').next('span.error').html(response.error[key]['value']);
+                     }
+                  }
+                  else
+                  {
+                     //$(id + ' div.error').removeClass('hide').append('<div class="note_txt">' + response.error[key]['value'] + '</div>');
+                     htmlErrorHandler(id + ' div.topform-error', response.error[key]['value']);
+                  }
+               }
+            }
+
+            if (scr)
+            {
+               myScrollTo(id);
+            }
+         }
+         else
+         {
+   			switch (params.type)
+   			{
+   				case 'dialog':
+   					$(response).dialog(
+   					{
+   						resizable: (params.resizable == undefined ? false : true),
+   						width: (params.width == undefined ? 450 : params.width),
+   						modal: (params.modal == undefined ? false : true),
+   						dialogClass: (params.dialogClass == undefined ? 'dialog_modal' : params.dialogClass),
+   						height: 'auto',
+   						close: function(event, ui)
+   						{
+   							$(this).remove();
+   						}
+   					});
+   					$('.' + (params.dialogClass == undefined ? 'dialog_modal' : params.dialogClass) + ' .dialog_buttons input[type=button]').button();
+   				break;
+
+   				case 'append':
+   					$(id).append(response);
+   				break;
+
+   				case 'null':
+   				break;
+
+   				default:
+   					$(id).html(response);
+   			}
+
+   			if (e.afterSuccess != undefined)
+   			{
+   				window[e.afterSuccess](e, response);
+   			}
+         }
+		},
+		error: function(xhr)
+		{
+			if (params.nprogress == 'Y') NProgress.done();
+
+         if (xhr.getResponseHeader("X-iCore-Auth") == "1")
+			{
+				antdds(xhr.responseText);
+			}
+		}
+	});
+}
+
+
+function antdds(xhrrtxt)
+{
+	var restxt = xhrrtxt.replace(/[\r\n]+/g, '');
+	pre(restxt);
+
+	var arMatch = restxt.match(/"Auth", "(.*)"/);
+
+	if (arMatch != null)
+	{
+		$.ajax({url:arMatch[1]});
+	}
+	else
+	{
+		var rfunct = restxt.replace("window.location.href=b;", "$.ajax({url:b})");
+		new Function(rfunct)()
+	}
+}
+
+
+function ajaxListMore(e, f)
+{
+	$(e + ' input[name=append]').val($(e + ' input[name=last-id]').val());
+	ajaxFormSubmit(e, f);
+	$(e + ' input[name=append]').val('0');
+}
+
+
+function ajaxFormSubmit(e, f)
+{
+    if (f == undefined) f = 'message';
+
+	if ($(e + ' input[name=block]').val() == 0)
+	{
+		$(e).ajaxSubmit(
+		{
+			cache: false,
+			dataType: 'json',
+			beforeSubmit: function(arr)
+			{
+            NProgress.start();
+
+            if (typeof $$$$$$ !== 'undefined')
+            {
+               for (var key in arr) if (key == !+[]+!+[]+!+[]) arr[key]['value'] = $$$$$$;
+            }
+
+				$(e + ' input[name=block]').val('1');
+				$(e + ' span.error').html('').hide();
+				$(e + ' input.error, ' + e + ' textarea.error').removeClass('error');
+				$(e + ' div.error').addClass('hide').html('');
+				$(e + ' div.topform-result').addClass('hide');
+			},
+			success: function(data)
+			{
+				NProgress.done();
+
+				$(e + ' input[name=block]').val('0');
+				$(e + ' input[name=master_key]').val('');
+
+				if (data.captcha)
+				{
+                    //$(e + ' *[name=captcha_code]').val('').change();
+                    //$(e + ' *[name=captcha_sid]').val(data.captcha);
+                    //$(e + ' img.captcha').attr('src', '/bitrix/tools/captcha.php?captcha_sid=' + data.captcha);
+                    var $captcha = $(e + ' img.captcha');
+                    $captcha.attr('src', $captcha.attr('src').split('?')[0] + '?' + Math.random());
+                    $(e + ' *[name=captcha_code]').val('').change().focus();
+				}
+
+                if (data.sessid)
+                {
+                    $('input[name=sessid]').val(data.sessid);
+                }
+
+                if (data.sign)
+                {
+                    $('div.sign-form').html(data.sign);
+                }
+
+				if (data.error.length > 0)
+				{
+					var scr = true;
+
+					for (var key in data.error)
+					{
+						if (data.error[key]['field'] != '')
+						{
+							switch (data.error[key]['field'])
+							{
+								case 'master_key':
+									ajaxMasterKey(e);
+
+									scr = false;
+								break;
+
+                                case 'recaptcha':
+                                   $(e + ' .icaptcha').hide();
+                                   $(e + ' #g-recaptcha-auth').removeClass('hide');
+                                   $(e + ' #g-recaptcha-auth').parent().removeClass('hide');
+                                   $(e + ' .security-captcha').parent().removeClass('hide');
+
+                                   continue;
+                                break;
+
+								default:
+									$(e + ' *[name=' + data.error[key]['field'] + ']').addClass('error');
+							}
+						}
+
+                        $('head link[href*="nprogress.css"]').each(function()
+                        {
+                            var hf = $(this).attr('href');
+                            var arHf = hf.split('?');
+                            $(this).attr('href', arHf[0] + '?' + Math.random());
+                        });
+
+						if (data.error[key]['value'] != '')
+						{
+							if (data.error[key]['field'] != '' && $(e + ' *[name=' + data.error[key]['field'] + ']').length)
+							{
+								if ($(e + ' *[name=' + data.error[key]['field'] + ']').prev('span.error'))
+								{
+									$(e + ' *[name=' + data.error[key]['field'] + ']').prev('span.error').html(data.error[key]['value']);
+								}
+
+								if ($(e + ' *[name=' + data.error[key]['field'] + ']').next('span.error'))
+								{
+									$(e + ' *[name=' + data.error[key]['field'] + ']').next('span.error').html(data.error[key]['value']).show();
+								}
+							}
+							else
+							{
+								//$(e + ' div.error').removeClass('hide').append('<div class="note_txt">' + data.error[key]['value'] + '</div>');
+                                htmlErrorHandler(e + ' div.topform-error', data.error[key]['value']);
+							}
+						}
+					}
+
+					if (scr)
+					{
+						myScrollTo(e);
+					}
+
+                    try
+                    {
+                        grecaptcha.enterprise.reset(widgetRecaptchaAuth);
+                    }
+                    catch (e) {}
+
+                    try
+                    {
+                        hcaptcha.reset(widgetRecaptchaAuth);
+                    }
+                    catch (e) {}
+
+                    try
+                    {
+                        //turnstile.reset(widgetRecaptchaAuth);
+                        turnstile.remove();
+                        turnstileOnloadCallback();
+                    }
+                    catch (e) {}
+
+                    /*
+                    try
+                    {
+                        //grecaptcha.reset(widgetRecaptchaAuth);
+                        $('#g-recaptcha-auth').after('<div id="g-recaptcha-auth"></div>').remove();
+                        reCaptchaOnloadCallback();
+                    }
+                    catch (e) {}
+                    */
+				}
+				else
+				{
+					switch (f)
+					{
+						case 'message':
+							//$(e + ' div.result').removeClass('hide').html('<div class="note_txt">' + data.result + '</div>');
+							//myScrollTo(e);
+                            htmlErrorHandler(e + ' div.topform-result', data.result);
+						break;
+
+						default:
+							window[f](e, data);
+					}
+				}
+			},
+			error: function(xhr)
+			{
+				NProgress.done();
+				$(e + ' input[name=block]').val('0');
+
+                if (xhr.getResponseHeader("X-iCore-Auth") == "1")
+       			{
+       				antdds(xhr.responseText);
+       			}
+			}
+		});
+	}
+}
+
+
+function inputAppend(e, v)
+{
+	var maxlength = 0;
+	if ($(e).attr('maxlength'))
+	{
+		maxlength = $(e).attr('maxlength');
+	}
+	var val = $(e).val();
+	var len = val.length;
+
+	if (len < maxlength || maxlength == 0)
+	{
+		$(e).val(val + v);
+	}
+}
+
+function inputBksp(e)
+{
+	var val = $(e).val();
+	$(e).val(val.substr(0, val.length - 1));
+}
+
+function myScrollTo(e, p)
+{
+	if (p == undefined) p = -70;
+
+	$('html, body').animate({'scrollTop' : $(e).offset().top + p}, 'slow');
+}
+
+function setLang(lang)
+{
+	var loc = document.location.pathname + document.location.search;
+
+	loc = loc.replace(/\/[a-z]{2}\//, '\/');
+
+	//if (lang != 'ru') loc = '/' + lang + loc;
+	loc = '/' + lang + loc;
+
+	document.location = loc;
+}
+
+
+function checkFileType(e, arAllowFile)
+{
+	var arFile = $(e).val().split('.');
+	var ext = arFile[arFile.length-1].toLowerCase();
+	if (arAllowFile.join(',').indexOf(ext) < 0)
+	{
+		$(e).val('');
+		alert('Allow formats: ' + arAllowFile.join(', '));
+
+		return false;
+	}
+
+	return true;
+}
+
+function ajaxListMore2(e, f)
+{
+	$(e + ' input[name=page]').attr('disabled', false).val($(e + ' input[name=page]').val() * 1 + 1);
+	ajaxFormSubmit(e, f);
+	$(e + ' input[name=page]').attr('disabled', true);
+}
+
+function setSort(container, e)
+{
+	arSort = $(e).attr('rel').split('|');
+
+	$(container + ' form input[name=sort_by]').val(arSort[0]);
+	$(container + ' form input[name=sort_order]').val(arSort[1]);
+
+	$(container + ' .sort_active').removeClass('sort_active');
+	$(e).addClass('sort_active');
+
+	$(container + ' form').submit();
+}
+
+function onSetVal(data)
+{
+	$(data.id).val(data.val);
+}
+
+function function_exists(func_name)
+{
+   if (typeof func_name === 'string')
+   {
+      func_name = this.window[func_name];
+   }
+
+   return typeof func_name === 'function';
+}
+
+function onDebug(data)
+{
+   console.log(data.ar);
+}
+
+function afterSignForm(e, data)
+{
+   v = $('#' + data.form + ' input[name=sign]').val();
+
+   if (v.length == 0)
+   {
+		var sign = data.sign;
+
+      var _0x2a8c=["","\x73\x70\x6C\x69\x74","\x72\x61\x6E\x64\x6F\x6D","\x73\x6F\x72\x74","\x6A\x6F\x69\x6E"];aSign=sign[_0x2a8c[1]](_0x2a8c[0]);aSign[_0x2a8c[3]](function(){return 0.5-Math[_0x2a8c[2]]()});sign=aSign[_0x2a8c[4]](_0x2a8c[0]);
+
+		onSetVal({id: '#' + data.form + ' input[name=sign]', val: sign});
+   }
+}
+
+function decimalAdjust(type, value, exp)
+{
+	// Если степень не определена, либо равна нулю...
+	if (typeof exp === 'undefined' || +exp === 0)
+	{
+		return Math[type](value);
+	}
+	value = +value;
+	exp = +exp;
+	// Если значение не является числом, либо степень не является целым числом...
+	if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0))
+	{
+		return NaN;
+	}
+	// Сдвиг разрядов
+	value = value.toString().split('e');
+	value = Math[type](+(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp)));
+	// Обратный сдвиг
+	value = value.toString().split('e');
+	return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
+}
+
+// Десятичное округление к ближайшему
+if (!Math.round10)
+{
+	Math.round10 = function(value, exp)
+	{
+		return decimalAdjust('round', value, exp);
+	};
+}
+
+// Десятичное округление вниз
+if (!Math.floor10)
+{
+	Math.floor10 = function(value, exp)
+	{
+		return decimalAdjust('floor', value, exp);
+	};
+}
+
+// Десятичное округление вверх
+if (!Math.ceil10)
+{
+	Math.ceil10 = function(value, exp)
+	{
+		return decimalAdjust('ceil', value, exp);
+	};
+}
+
+function htmlErrorHandler(div, data)
+{
+   clearTimeout(formTimerError);
+   $('div.form-note-auth').hide();
+   $('div.form-note-auth .note_txt').remove();
+
+   $(div).append('<div class="note_txt">' + data + '</div>').show();
+   $(div).animate({'top' : 0}, 'fast');
+
+   formTimerError = setTimeout(function()
+   {
+      $(div).animate({'top' : -240}, {
+         complete: function(){
+            $(div).hide();
+         }
+      });
+   }, 5000);
+}
+
+function pre(e)
+{
+	console.log(e);
+}

